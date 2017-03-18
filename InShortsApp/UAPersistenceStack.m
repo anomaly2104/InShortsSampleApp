@@ -32,7 +32,7 @@
 }
 
 + (NSURL *)modelURL {
-  return [[NSBundle mainBundle] URLForResource:@"Model"
+  return [[NSBundle mainBundle] URLForResource:@"InShortsApp"
                                  withExtension:@"momd"];
 }
 
