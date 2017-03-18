@@ -52,7 +52,8 @@ NSFetchedResultsControllerDelegate>
 - (void)setupNFRC {
   NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[UANewsItem tdt_entityName]];
   fetchRequest.predicate = nil;
-  fetchRequest.sortDescriptors = @[ [NSSortDescriptor sortDescriptorWithKey:@"createdAt" ascending:YES] ];
+  fetchRequest.sortDescriptors = @[ [NSSortDescriptor sortDescriptorWithKey:@"createdAt"
+                                                                  ascending:NO] ];
   
   self.nfrc = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                   managedObjectContext:[UAPersistenceStack sharedInstance].mainMOC
