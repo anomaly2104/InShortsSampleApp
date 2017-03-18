@@ -12,6 +12,7 @@
 #import "NSString+UAAdditions.h"
 #import "UANewsItem+JSONDecoding.h"
 #import "UAPersistenceStack.h"
+#import <TDTChocolate/TDTCoreDataAdditions.h>
 
 static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
 
@@ -71,6 +72,7 @@ static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
         TDTLogError(@"Error occurred while parsing news JSON: %@", error);
       }
     }];
+    [self.managedObjectContext tdt_save];
   }];
 }
 

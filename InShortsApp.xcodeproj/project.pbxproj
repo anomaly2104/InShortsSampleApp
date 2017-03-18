@@ -151,7 +151,6 @@
 				636B4EA21E7D160700DF0DF1 /* Assets.xcassets */,
 				636B4EA41E7D160700DF0DF1 /* LaunchScreen.storyboard */,
 				636B4EA71E7D160700DF0DF1 /* Info.plist */,
-				636B4E9F1E7D160700DF0DF1 /* InShortsApp.xcdatamodeld */,
 				636B4E931E7D160700DF0DF1 /* Supporting Files */,
 				636B4EDC1E7D2A2E00DF0DF1 /* NSNumber+UADateAdditions.h */,
 				636B4EDD1E7D2A2E00DF0DF1 /* NSNumber+UADateAdditions.m */,
@@ -189,6 +188,7 @@
 				636B4ED11E7D246600DF0DF1 /* UANewsItem+JSONDecoding.m */,
 				636B4ED61E7D24E500DF0DF1 /* UANewsItem+Additions.h */,
 				636B4ED71E7D24E500DF0DF1 /* UANewsItem+Additions.m */,
+				636B4E9F1E7D160700DF0DF1 /* InShortsApp.xcdatamodeld */,
 			);
 			name = "Core data";
 			sourceTree = "<group>";
