@@ -17,6 +17,8 @@
 #import <TDTChocolate/TDTFoundationAdditions.h>
 #import "UANewsCardView.h"
 #import "UANewsItem+Additions.h"
+#import <SVWebViewController/SVWebViewController.h>
+#import <SafariServices/SFSafariViewController.h>
 
 @interface UAViewController () <UAInshortsViewDelegate,
 UAInshortsViewDataSource,
@@ -44,6 +46,11 @@ UANewsCardViewDelegate>
   
   self.newsFetchManager = [[UANewsFetchManager alloc] init];
   [self fetchLatestNews];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)fetchLatestNews {
@@ -100,12 +107,13 @@ UANewsCardViewDelegate>
 #pragma mark - UAInshortsViewDataSource
 
 - (void)inshortsViewCurrentItemIndexDidChange:(UAInshortsView *)inshortsView {
-  //TODO: Implement this.
+  [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)inshortsView:(UAInshortsView *)inshortsView
 didSelectItemAtIndex:(NSInteger)index {
-  //TODO: Implement this.
+  [self.navigationController setNavigationBarHidden:!self.navigationController.isNavigationBarHidden
+                                           animated:YES];
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate
@@ -117,7 +125,9 @@ didSelectItemAtIndex:(NSInteger)index {
 #pragma mark - UANewsCardViewDelegate
 
 - (void)newsCardViewDidPressReadMore:(UANewsCardView *)newsCardView {
-  //TODO: Implement this.
+  NSURL *sourceURL = [NSURL URLWithString:newsCardView.newsItem.sourceURLString];
+  SFSafariViewController *safariViewController = [[SFSafariViewController alloc] initWithURL:sourceURL];
+  [self.navigationController presentViewController:safariViewController animated:YES completion:nil];
 }
 
 - (void)newsCardViewDidTapTitleView:(UANewsCardView *)newsCardView {
