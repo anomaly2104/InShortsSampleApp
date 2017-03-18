@@ -15,6 +15,9 @@
 		636B4EA31E7D160700DF0DF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 636B4EA21E7D160700DF0DF1 /* Assets.xcassets */; };
 		636B4EA61E7D160700DF0DF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 636B4EA41E7D160700DF0DF1 /* LaunchScreen.storyboard */; };
 		636B4EB11E7D160700DF0DF1 /* InShortsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4EB01E7D160700DF0DF1 /* InShortsAppTests.m */; };
+		636B4EBD1E7D175E00DF0DF1 /* UAPersistenceStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4EBC1E7D175E00DF0DF1 /* UAPersistenceStack.m */; };
+		636B4EC31E7D1B6200DF0DF1 /* UANewsItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4EC01E7D1B6200DF0DF1 /* UANewsItem+CoreDataClass.m */; };
+		636B4EC41E7D1B6200DF0DF1 /* UANewsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4EC21E7D1B6200DF0DF1 /* UANewsItem+CoreDataProperties.m */; };
 		EE42DD5923BE7A01FD09FE31 /* libPods-InShortsApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 866280BF53026925F759FB7C /* libPods-InShortsApp.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +47,12 @@
 		636B4EAC1E7D160700DF0DF1 /* InShortsAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InShortsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		636B4EB01E7D160700DF0DF1 /* InShortsAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InShortsAppTests.m; sourceTree = "<group>"; };
 		636B4EB21E7D160700DF0DF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636B4EBB1E7D175E00DF0DF1 /* UAPersistenceStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAPersistenceStack.h; sourceTree = "<group>"; };
+		636B4EBC1E7D175E00DF0DF1 /* UAPersistenceStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAPersistenceStack.m; sourceTree = "<group>"; };
+		636B4EBF1E7D1B6200DF0DF1 /* UANewsItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UANewsItem+CoreDataClass.h"; sourceTree = "<group>"; };
+		636B4EC01E7D1B6200DF0DF1 /* UANewsItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataClass.m"; sourceTree = "<group>"; };
+		636B4EC11E7D1B6200DF0DF1 /* UANewsItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UANewsItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		636B4EC21E7D1B6200DF0DF1 /* UANewsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		866280BF53026925F759FB7C /* libPods-InShortsApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InShortsApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B741E76577D0C972600F8BDE /* Pods-InShortsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InShortsApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InShortsApp/Pods-InShortsApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +116,7 @@
 		636B4E921E7D160700DF0DF1 /* InShortsApp */ = {
 			isa = PBXGroup;
 			children = (
+				636B4EC51E7D1B6E00DF0DF1 /* Core data */,
 				636B4E961E7D160700DF0DF1 /* UAAppDelegate.h */,
 				636B4E971E7D160700DF0DF1 /* UAAppDelegate.m */,
 				636B4E991E7D160700DF0DF1 /* UAViewController.h */,
@@ -136,6 +146,19 @@
 				636B4EB21E7D160700DF0DF1 /* Info.plist */,
 			);
 			path = InShortsAppTests;
+			sourceTree = "<group>";
+		};
+		636B4EC51E7D1B6E00DF0DF1 /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				636B4EBF1E7D1B6200DF0DF1 /* UANewsItem+CoreDataClass.h */,
+				636B4EC01E7D1B6200DF0DF1 /* UANewsItem+CoreDataClass.m */,
+				636B4EC11E7D1B6200DF0DF1 /* UANewsItem+CoreDataProperties.h */,
+				636B4EC21E7D1B6200DF0DF1 /* UANewsItem+CoreDataProperties.m */,
+				636B4EBB1E7D175E00DF0DF1 /* UAPersistenceStack.h */,
+				636B4EBC1E7D175E00DF0DF1 /* UAPersistenceStack.m */,
+			);
+			name = "Core data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +317,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				636B4E9B1E7D160700DF0DF1 /* UAViewController.m in Sources */,
+				636B4EC31E7D1B6200DF0DF1 /* UANewsItem+CoreDataClass.m in Sources */,
+				636B4EBD1E7D175E00DF0DF1 /* UAPersistenceStack.m in Sources */,
+				636B4EC41E7D1B6200DF0DF1 /* UANewsItem+CoreDataProperties.m in Sources */,
 				636B4E981E7D160700DF0DF1 /* UAAppDelegate.m in Sources */,
 				636B4E951E7D160700DF0DF1 /* main.m in Sources */,
 				636B4EA11E7D160700DF0DF1 /* InShortsApp.xcdatamodeld in Sources */,
@@ -499,6 +525,7 @@
 				636B4EB71E7D160700DF0DF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		636B4EB81E7D160700DF0DF1 /* Build configuration list for PBXNativeTarget "InShortsAppTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +534,7 @@
 				636B4EBA1E7D160700DF0DF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -7,6 +7,7 @@
 //
 
 #import "UAAppDelegate.h"
+#import "UAPersistenceStack.h"
 
 @interface UAAppDelegate ()
 
@@ -16,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  [[UAPersistenceStack sharedInstance] setupDataStore];
   return YES;
 }
 

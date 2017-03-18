@@ -8,4 +8,6 @@ end
 
 target :InShortsApp do
   pod 'AFNetworking', '~> 3.0'
+  chocolate_import_subspec('FoundationAdditions')
+  chocolate_import_subspec('CoreDataAdditions')
 end
