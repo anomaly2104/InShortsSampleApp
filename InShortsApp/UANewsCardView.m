@@ -32,6 +32,11 @@
   [self setContent:newsItem.content];
   [self updateFootnoteLabelWithSourceName:newsItem.sourceName
                                      date:newsItem.createdAt];
+  if (newsItem.isBookmarked) {
+    self.titleLabel.textColor = [UIColor blueColor];
+  } else {
+    self.titleLabel.textColor = [UIColor blackColor];
+  }
 }
 
 - (void)setImageURLString:(NSString *)imageURLString {
