@@ -87,8 +87,6 @@
   CGFloat velocityY = (0.2 * [(UIPanGestureRecognizer*)sender velocityInView:self].y);
   
   if (pangr.state == UIGestureRecognizerStateBegan) {
-    //        NSLog(@"UIGestureRecognizerStateBegan");
-    
     CGFloat animationDuration = (ABS(velocityY)*.0002)+.15;
     
     [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -117,9 +115,6 @@
     
   }
   if (pangr.state == UIGestureRecognizerStateEnded) {
-    //        NSLog(@"UIGestureRecognizerStateEnded");
-    //        NSLog(@"velocity = %f", velocityY);
-    
     if (translationInView.y < 0) {
       // user was swiping up and the gesture has now ended
       if (self.nextView && ((translationInView.y < -self.currentView.frame.size.height/2) || (velocityY < -200))) {
@@ -190,8 +185,6 @@
           self.currentView.transform = CGAffineTransformMakeScale(1.0, 1.0);
           self.previousView.transform = CGAffineTransformMakeTranslation(0, -self.previousView.frame.size.height);
         } completion:^(BOOL finished) {
-          //                    NSLog(@"complete");
-          
         }];
         
         

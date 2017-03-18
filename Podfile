@@ -11,4 +11,5 @@ target :InShortsApp do
   chocolate_import_subspec('FoundationAdditions')
   chocolate_import_subspec('CoreDataAdditions')
   pod 'SDWebImage', '~>3.7'
+  pod 'DateTools'
 end

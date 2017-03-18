@@ -1,11 +1,11 @@
 #import <UIKit/UIKit.h>
 
+@class UANewsItem;
+
 @interface UANewsCardView : UIView
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 
-- (void)setImageURLString:(NSString *)imageURLString;
-- (void)setTitle:(NSString *)title;
-- (void)setContent:(NSString *)content;
+- (void)updateWithNewsItem:(UANewsItem *)newsItem;
 
 @end

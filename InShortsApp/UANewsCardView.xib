@@ -29,19 +29,26 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="KNJ-CU-g5Q"/>
                             </constraints>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-aT-iFb">
-                            <rect key="frame" x="16" y="337" width="311" height="21"/>
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                            <rect key="frame" x="16" y="337" width="311" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="14"/>
                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfs-LT-T5D">
+                            <rect key="frame" x="16" y="362" width="31" height="14.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="xfs-LT-T5D" firstAttribute="leading" secondItem="D3B-aT-iFb" secondAttribute="leading" id="5QL-I9-o9O"/>
                         <constraint firstAttribute="trailing" secondItem="D3B-aT-iFb" secondAttribute="trailing" constant="16" id="QTR-wa-uBN"/>
                         <constraint firstAttribute="trailing" secondItem="x7u-ni-t6f" secondAttribute="trailing" constant="16" id="X9D-mm-KWT"/>
                         <constraint firstItem="x7u-ni-t6f" firstAttribute="top" secondItem="lO6-6b-G4k" secondAttribute="bottom" constant="16" id="bLU-0L-DYe"/>
@@ -50,6 +57,7 @@
                         <constraint firstAttribute="trailing" secondItem="lO6-6b-G4k" secondAttribute="trailing" id="hvI-Oc-rYD"/>
                         <constraint firstItem="lO6-6b-G4k" firstAttribute="leading" secondItem="NSe-Lg-xNN" secondAttribute="leading" id="jhp-HO-Dge"/>
                         <constraint firstItem="D3B-aT-iFb" firstAttribute="leading" secondItem="NSe-Lg-xNN" secondAttribute="leading" constant="16" id="lFT-8t-baf"/>
+                        <constraint firstItem="xfs-LT-T5D" firstAttribute="top" secondItem="D3B-aT-iFb" secondAttribute="bottom" constant="8" id="wRF-9K-eiE"/>
                         <constraint firstItem="x7u-ni-t6f" firstAttribute="leading" secondItem="NSe-Lg-xNN" secondAttribute="leading" constant="16" id="z6l-Nf-LF3"/>
                     </constraints>
                 </view>
@@ -75,6 +83,7 @@
             <connections>
                 <outlet property="containerView" destination="NSe-Lg-xNN" id="84b-g9-flc"/>
                 <outlet property="contentLabel" destination="D3B-aT-iFb" id="rXa-f5-35E"/>
+                <outlet property="footnoteLabel" destination="xfs-LT-T5D" id="jsu-aR-NuE"/>
                 <outlet property="imageView" destination="lO6-6b-G4k" id="VIp-aU-Qet"/>
                 <outlet property="titleLabel" destination="x7u-ni-t6f" id="wdo-Xs-aji"/>
             </connections>

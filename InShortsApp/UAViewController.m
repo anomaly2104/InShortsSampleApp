@@ -89,9 +89,7 @@ NSFetchedResultsControllerDelegate>
   
   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
   UANewsItem *newsItem = [self.nfrc objectAtIndexPath:indexPath];
-  [view setImageURLString:newsItem.imageURLString];
-  [view setTitle:newsItem.title];
-  [view setContent:newsItem.content];
+  [view updateWithNewsItem:newsItem];
   return view;
 }
 
