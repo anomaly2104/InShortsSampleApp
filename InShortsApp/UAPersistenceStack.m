@@ -12,16 +12,6 @@
   return sharedInstance;
 }
 
-- (instancetype)initWithStoreURL:(NSURL *)storeURL modelURL:(NSURL *)modelURL {
-  self = [super init];
-  if (self) {
-    TDTParameterAssert(storeURL);
-    TDTParameterAssert(modelURL);
-    
-  }
-  return self;
-}
-
 + (NSURL *)storeURL {
   NSURL *documentsDirectory = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory
                                                                      inDomain:NSUserDomainMask
