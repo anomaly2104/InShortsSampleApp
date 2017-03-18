@@ -84,10 +84,6 @@ NSFetchedResultsControllerDelegate>
     view = [[NSBundle mainBundle] loadNibNamed:@"UANewsCardView"
                                          owner:self
                                        options:nil].firstObject;
-    view.containerWidth = inshortsView.frame.size.width - 32;
-    view.containerHeight = inshortsView.frame.size.height - 40;
-    view.containerX = 16;
-    view.containerY = 20;
     view.frame = CGRectMake(0, 0,inshortsView.frame.size.width, inshortsView.frame.size.height);
   }
   
