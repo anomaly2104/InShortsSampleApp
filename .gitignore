@@ -1,0 +1,5 @@
+xcuserdata
+*.xccheckout
+DerivedSources
+build
+Pods
