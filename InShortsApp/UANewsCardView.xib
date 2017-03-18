@@ -26,9 +26,13 @@
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7u-ni-t6f">
                             <rect key="frame" x="16" y="286" width="311" height="18"/>
+                            <gestureRecognizers/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="lCK-JX-3nu" appends="YES" id="Bd4-uw-dlw"/>
+                            </connections>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3B-aT-iFb">
                             <rect key="frame" x="16" y="312" width="311" height="17"/>
@@ -42,16 +46,25 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBS-6k-cpy">
+                            <rect key="frame" x="134" y="361.5" width="74" height="30"/>
+                            <state key="normal" title="Read More"/>
+                            <connections>
+                                <action selector="readMorePressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="JCM-Hs-nXa"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="xfs-LT-T5D" firstAttribute="leading" secondItem="D3B-aT-iFb" secondAttribute="leading" id="5QL-I9-o9O"/>
+                        <constraint firstItem="GBS-6k-cpy" firstAttribute="centerX" secondItem="NSe-Lg-xNN" secondAttribute="centerX" id="FjF-WP-rLK"/>
                         <constraint firstAttribute="trailing" secondItem="D3B-aT-iFb" secondAttribute="trailing" constant="16" id="QTR-wa-uBN"/>
                         <constraint firstAttribute="trailing" secondItem="x7u-ni-t6f" secondAttribute="trailing" constant="16" id="X9D-mm-KWT"/>
                         <constraint firstItem="x7u-ni-t6f" firstAttribute="top" secondItem="lO6-6b-G4k" secondAttribute="bottom" constant="16" id="bLU-0L-DYe"/>
                         <constraint firstItem="lO6-6b-G4k" firstAttribute="top" secondItem="NSe-Lg-xNN" secondAttribute="top" id="dOo-v7-m54"/>
                         <constraint firstItem="D3B-aT-iFb" firstAttribute="top" secondItem="x7u-ni-t6f" secondAttribute="bottom" constant="8" id="gqS-d9-B3G"/>
                         <constraint firstAttribute="trailing" secondItem="lO6-6b-G4k" secondAttribute="trailing" id="hvI-Oc-rYD"/>
+                        <constraint firstItem="GBS-6k-cpy" firstAttribute="top" secondItem="xfs-LT-T5D" secondAttribute="bottom" constant="10" id="jg5-SC-T73"/>
                         <constraint firstItem="lO6-6b-G4k" firstAttribute="leading" secondItem="NSe-Lg-xNN" secondAttribute="leading" id="jhp-HO-Dge"/>
                         <constraint firstItem="D3B-aT-iFb" firstAttribute="leading" secondItem="NSe-Lg-xNN" secondAttribute="leading" constant="16" id="lFT-8t-baf"/>
                         <constraint firstItem="xfs-LT-T5D" firstAttribute="top" secondItem="D3B-aT-iFb" secondAttribute="bottom" constant="8" id="wRF-9K-eiE"/>
@@ -90,5 +103,10 @@
             </connections>
             <point key="canvasLocation" x="33.5" y="153.5"/>
         </view>
+        <tapGestureRecognizer id="lCK-JX-3nu">
+            <connections>
+                <action selector="titleTapped:" destination="iN0-l3-epB" id="8Ab-5P-H3F"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
 </document>

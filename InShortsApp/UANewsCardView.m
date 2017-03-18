@@ -9,6 +9,7 @@
 
 @interface UANewsCardView ()
 
+@property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
@@ -24,7 +25,8 @@
   self.containerView.translatesAutoresizingMaskIntoConstraints = YES;
 }
 
-- (void)updateWithNewsItem:(UANewsItem *)newsItem {
+- (void)setNewsItem:(UANewsItem *)newsItem {
+  _newsItem = newsItem;
   [self setImageURLString:newsItem.imageURLString];
   [self setTitle:newsItem.title];
   [self setContent:newsItem.content];
@@ -54,6 +56,16 @@
   } else if (date != nil) {
     self.footnoteLabel.text = [NSString stringWithFormat:MoreTitleWithDate, date.timeAgoSinceNow];
   }
+}
+
+#pragma mark - Actions
+
+- (IBAction)titleTapped:(id)sender {
+  [self.delegate newsCardViewDidTapTitleView:self];
+}
+
+- (IBAction)readMorePressed:(id)sender {
+  [self.delegate newsCardViewDidPressReadMore:self];
 }
 
 @end

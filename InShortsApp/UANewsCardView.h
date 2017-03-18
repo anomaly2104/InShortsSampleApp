@@ -2,10 +2,18 @@
 
 @class UANewsItem;
 
+@protocol UANewsCardViewDelegate;
+
 @interface UANewsCardView : UIView
 
-@property (weak, nonatomic) IBOutlet UIView *containerView;
+@property (nonatomic, weak) id<UANewsCardViewDelegate> delegate;
+@property (nonatomic) UANewsItem *newsItem;
 
-- (void)updateWithNewsItem:(UANewsItem *)newsItem;
+@end
+
+@protocol UANewsCardViewDelegate <NSObject>
+
+- (void)newsCardViewDidTapTitleView:(UANewsCardView *)newsCardView;
+- (void)newsCardViewDidPressReadMore:(UANewsCardView *)newsCardView;
 
 @end

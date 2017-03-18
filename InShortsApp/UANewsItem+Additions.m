@@ -39,4 +39,14 @@
   return newsItem;
 }
 
+- (void)toggleBookmarkInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
+  NSManagedObjectID *newsItemID = self.objectID;
+  
+  [managedObjectContext performBlock:^{
+    UANewsItem *newsItem = (UANewsItem *)[managedObjectContext tdt_existingObjectWithID:newsItemID];
+    newsItem.isBookmarked = !newsItem.isBookmarked;
+    [managedObjectContext tdt_save];
+  }];
+}
+
 @end

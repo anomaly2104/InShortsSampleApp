@@ -13,4 +13,6 @@
 + (instancetype)newsItemWithHashID:(NSString *)hashID
             inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
+- (void)toggleBookmarkInManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
+
 @end

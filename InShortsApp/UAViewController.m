@@ -16,10 +16,12 @@
 #import <TDTChocolate/TDTCoreDataAdditions.h>
 #import <TDTChocolate/TDTFoundationAdditions.h>
 #import "UANewsCardView.h"
+#import "UANewsItem+Additions.h"
 
 @interface UAViewController () <UAInshortsViewDelegate,
 UAInshortsViewDataSource,
-NSFetchedResultsControllerDelegate>
+NSFetchedResultsControllerDelegate,
+UANewsCardViewDelegate>
 
 @property (nonatomic) UANewsFetchManager *newsFetchManager;
 @property (nonatomic) UAInshortsView *inshortsView;
@@ -86,11 +88,12 @@ NSFetchedResultsControllerDelegate>
                                          owner:self
                                        options:nil].firstObject;
     view.frame = CGRectMake(0, 0,inshortsView.frame.size.width, inshortsView.frame.size.height);
+    view.delegate = self;
   }
   
   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
   UANewsItem *newsItem = [self.nfrc objectAtIndexPath:indexPath];
-  [view updateWithNewsItem:newsItem];
+  view.newsItem = newsItem;
   return view;
 }
 
@@ -109,6 +112,17 @@ didSelectItemAtIndex:(NSInteger)index {
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
   [self.inshortsView reloadData];
+}
+
+#pragma mark - UANewsCardViewDelegate
+
+- (void)newsCardViewDidPressReadMore:(UANewsCardView *)newsCardView {
+  //TODO: Implement this.
+}
+
+- (void)newsCardViewDidTapTitleView:(UANewsCardView *)newsCardView {
+  UANewsItem *newsItem = newsCardView.newsItem;
+  [newsItem toggleBookmarkInManagedObjectContext:[UAPersistenceStack sharedInstance].backgroundMOC];
 }
 
 @end
