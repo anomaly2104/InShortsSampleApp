@@ -19,9 +19,10 @@
 @dynamic title;
 @dynamic hashID;
 @dynamic authorName;
-@dynamic sourceURL;
+@dynamic sourceURLString;
 @dynamic isBookmarked;
 @dynamic sourceName;
 @dynamic createdAt;
+@dynamic imageURLString;
 
 @end

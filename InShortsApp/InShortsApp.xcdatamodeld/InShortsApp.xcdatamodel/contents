@@ -4,13 +4,14 @@
         <attribute name="authorName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="hashID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="hashID" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="imageURLString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isBookmarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sourceName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="sourceURL" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sourceURLString" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UANewsItem" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="UANewsItem" positionX="-63" positionY="-18" width="128" height="180"/>
     </elements>
 </model>

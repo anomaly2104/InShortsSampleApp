@@ -20,10 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *title;
 @property (nullable, nonatomic, copy) NSString *hashID;
 @property (nullable, nonatomic, copy) NSString *authorName;
-@property (nullable, nonatomic, copy) NSString *sourceURL;
+@property (nullable, nonatomic, copy) NSString *sourceURLString;
 @property (nonatomic) BOOL isBookmarked;
 @property (nullable, nonatomic, copy) NSString *sourceName;
 @property (nullable, nonatomic, copy) NSDate *createdAt;
+@property (nullable, nonatomic, copy) NSString *imageURLString;
 
 @end
 
