@@ -92,13 +92,23 @@ NSFetchedResultsControllerDelegate>
     view.frame = CGRectMake(0, 0,inshortsView.frame.size.width, inshortsView.frame.size.height);
   }
   
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+  UANewsItem *newsItem = [self.nfrc objectAtIndexPath:indexPath];
+  [view setImageURLString:newsItem.imageURLString];
+  [view setTitle:newsItem.title];
+  [view setContent:newsItem.content];
   return view;
 }
 
 #pragma mark - UAInshortsViewDataSource
 
 - (void)inshortsViewCurrentItemIndexDidChange:(UAInshortsView *)inshortsView {
-  
+  //TODO: Implement this.
+}
+
+- (void)inshortsView:(UAInshortsView *)inshortsView
+didSelectItemAtIndex:(NSInteger)index {
+  //TODO: Implement this.
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate

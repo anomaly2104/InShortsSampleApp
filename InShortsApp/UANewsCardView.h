@@ -8,4 +8,8 @@
 @property (nonatomic) int containerX;
 @property (nonatomic) int containerY;
 
+- (void)setImageURLString:(NSString *)imageURLString;
+- (void)setTitle:(NSString *)title;
+- (void)setContent:(NSString *)content;
+
 @end
