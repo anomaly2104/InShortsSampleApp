@@ -17,10 +17,10 @@
 + (UANewsItem *)newsItemFromJSON:(NSDictionary *)JSON
           inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext
                            error:(NSError **)error {
-  NSString *hashID = JSON[@"hashID"];
+  NSString *hashID = JSON[@"hash_id"];
   if (hashID == nil) {
     *error = [NSError ua_fieldErrorForJSONElement:JSON
-                                            field:@"hashID"];
+                                            field:@"hash_id"];
     return nil;
   }
   
