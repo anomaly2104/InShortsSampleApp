@@ -1,11 +1,13 @@
 #import "UAInshortsView.h"
 
 @interface UAInshortsView()
+
 @property (nonatomic) UIView* previousView;
 @property (nonatomic) UIView* currentView;
 @property (nonatomic) UIView* nextView;
 @property (nonatomic) UIPanGestureRecognizer* pangr;
 @property (nonatomic) UITapGestureRecognizer* tapgr;
+
 @end
 
 @implementation UAInshortsView
