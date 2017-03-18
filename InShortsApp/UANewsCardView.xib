@@ -18,14 +18,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSe-Lg-xNN">
                     <rect key="frame" x="16" y="20" width="343" height="627"/>
                     <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" red="0.0039215686269999999" green="0.63529411759999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="NSe-Lg-xNN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="0y4-a9-9UZ"/>
-                <constraint firstAttribute="trailing" secondItem="NSe-Lg-xNN" secondAttribute="trailing" constant="16" id="NCo-DT-w24"/>
-                <constraint firstItem="NSe-Lg-xNN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="UhN-xv-Zgi"/>
-                <constraint firstAttribute="bottom" secondItem="NSe-Lg-xNN" secondAttribute="bottom" constant="20" id="rz1-un-77u"/>
+                <constraint firstItem="NSe-Lg-xNN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" placeholder="YES" id="0y4-a9-9UZ"/>
+                <constraint firstAttribute="trailing" secondItem="NSe-Lg-xNN" secondAttribute="trailing" constant="16" placeholder="YES" id="NCo-DT-w24"/>
+                <constraint firstItem="NSe-Lg-xNN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" placeholder="YES" id="UhN-xv-Zgi"/>
+                <constraint firstAttribute="bottom" secondItem="NSe-Lg-xNN" secondAttribute="bottom" constant="20" placeholder="YES" id="rz1-un-77u"/>
             </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
@@ -33,9 +38,6 @@
                 </userDefinedRuntimeAttribute>
                 <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
                     <size key="value" width="5" height="5"/>
-                </userDefinedRuntimeAttribute>
-                <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
-                    <integer key="value" value="3"/>
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
