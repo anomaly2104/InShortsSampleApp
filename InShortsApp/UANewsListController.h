@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UAViewController : UIViewController
+@interface UANewsListController : UIViewController
 
+@property (nonatomic) NSPredicate *predicate;
 
 @end
 

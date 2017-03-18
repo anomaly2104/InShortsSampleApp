@@ -2,7 +2,7 @@
 //  UANewsItem+CoreDataProperties.m
 //  InShortsApp
 //
-//  Created by Udit Agarwal on 18/03/17.
+//  Created by Udit Agarwal on 19/03/17.
 //  Copyright © 2017 Udit Agarwal. All rights reserved.
 //  This file was automatically generated and should not be edited.
 //
@@ -15,14 +15,14 @@
 	return [[NSFetchRequest alloc] initWithEntityName:@"UANewsItem"];
 }
 
-@dynamic content;
-@dynamic title;
-@dynamic hashID;
 @dynamic authorName;
-@dynamic sourceURLString;
+@dynamic content;
+@dynamic createdAt;
+@dynamic hashID;
+@dynamic imageURLString;
 @dynamic isBookmarked;
 @dynamic sourceName;
-@dynamic createdAt;
-@dynamic imageURLString;
+@dynamic sourceURLString;
+@dynamic title;
 
 @end

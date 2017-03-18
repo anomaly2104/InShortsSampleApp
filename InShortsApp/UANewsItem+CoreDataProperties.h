@@ -2,7 +2,7 @@
 //  UANewsItem+CoreDataProperties.h
 //  InShortsApp
 //
-//  Created by Udit Agarwal on 18/03/17.
+//  Created by Udit Agarwal on 19/03/17.
 //  Copyright © 2017 Udit Agarwal. All rights reserved.
 //  This file was automatically generated and should not be edited.
 //
@@ -16,15 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<UANewsItem *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *content;
-@property (nullable, nonatomic, copy) NSString *title;
-@property (nullable, nonatomic, copy) NSString *hashID;
 @property (nullable, nonatomic, copy) NSString *authorName;
-@property (nullable, nonatomic, copy) NSString *sourceURLString;
+@property (nullable, nonatomic, copy) NSString *content;
+@property (nullable, nonatomic, copy) NSDate *createdAt;
+@property (nullable, nonatomic, copy) NSString *hashID;
+@property (nullable, nonatomic, copy) NSString *imageURLString;
 @property (nonatomic) BOOL isBookmarked;
 @property (nullable, nonatomic, copy) NSString *sourceName;
-@property (nullable, nonatomic, copy) NSDate *createdAt;
-@property (nullable, nonatomic, copy) NSString *imageURLString;
+@property (nullable, nonatomic, copy) NSString *sourceURLString;
+@property (nullable, nonatomic, copy) NSString *title;
 
 @end
 

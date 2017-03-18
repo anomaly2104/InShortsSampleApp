@@ -6,7 +6,7 @@
 //  Copyright © 2017 Udit Agarwal. All rights reserved.
 //
 
-#import "UAViewController.h"
+#import "UANewsListController.h"
 #import "UANewsFetchManager.h"
 #import "UAInshortsView.h"
 #import "UANewsCardView.h"
@@ -19,7 +19,7 @@
 #import "UANewsItem+Additions.h"
 #import <SafariServices/SFSafariViewController.h>
 
-@interface UAViewController () <UAInshortsViewDelegate,
+@interface UANewsListController () <UAInshortsViewDelegate,
 UAInshortsViewDataSource,
 NSFetchedResultsControllerDelegate,
 UANewsCardViewDelegate>
@@ -31,7 +31,7 @@ UANewsCardViewDelegate>
 
 @end
 
-@implementation UAViewController
+@implementation UANewsListController
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -42,6 +42,7 @@ UANewsCardViewDelegate>
   [self.view addSubview:self.inshortsView];
   
   [self setupNFRC];
+  [self.inshortsView reloadData];
   
   self.newsFetchManager = [[UANewsFetchManager alloc] init];
   [self fetchLatestNews];
@@ -59,7 +60,7 @@ UANewsCardViewDelegate>
 
 - (void)setupNFRC {
   NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:[UANewsItem tdt_entityName]];
-  fetchRequest.predicate = nil;
+  fetchRequest.predicate = self.predicate;
   fetchRequest.sortDescriptors = @[ [NSSortDescriptor sortDescriptorWithKey:@"createdAt"
                                                                   ascending:NO] ];
   
@@ -132,6 +133,19 @@ didSelectItemAtIndex:(NSInteger)index {
 - (void)newsCardViewDidTapTitleView:(UANewsCardView *)newsCardView {
   UANewsItem *newsItem = newsCardView.newsItem;
   [newsItem toggleBookmarkInManagedObjectContext:[UAPersistenceStack sharedInstance].backgroundMOC];
+}
+
+#pragma mark - Segue
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"UAShowBookmarks"]) {
+    UANewsListController *booksmarks = segue.destinationViewController;
+    booksmarks.predicate = [self predicateForBooksmarks];
+  }
+}
+
+- (NSPredicate *)predicateForBooksmarks {
+  return [NSPredicate predicateWithFormat:@"isBookmarked = 1"];
 }
 
 @end
