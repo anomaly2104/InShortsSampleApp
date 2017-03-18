@@ -24,7 +24,6 @@ NSFetchedResultsControllerDelegate>
 @property (nonatomic) UANewsFetchManager *newsFetchManager;
 @property (nonatomic) UAInshortsView *inshortsView;
 
-//@property (nonatomic) NSArray<UANewsItem *> *newsList;
 @property (nonatomic) NSFetchedResultsController *nfrc;
 
 @end
