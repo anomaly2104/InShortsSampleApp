@@ -17,7 +17,6 @@
 #import <TDTChocolate/TDTFoundationAdditions.h>
 #import "UANewsCardView.h"
 #import "UANewsItem+Additions.h"
-#import <SVWebViewController/SVWebViewController.h>
 #import <SafariServices/SFSafariViewController.h>
 
 @interface UAViewController () <UAInshortsViewDelegate,
