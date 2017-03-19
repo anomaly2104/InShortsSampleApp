@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface NSString (UAAdditions)
 
 + (NSString *)ua_JSONStringForBoolValue:(BOOL)boolValue;
+
+- (BOOL)ua_isStringFittingInOneLineWithMaxSize:(CGSize)maxSize
+                                          font:(UIFont *)font;
+
+- (NSString *)ua_stringByConvertingSecondLastSpaceToNewLine;
 
 @end

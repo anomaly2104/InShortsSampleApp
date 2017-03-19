@@ -2,6 +2,7 @@
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "UANewsItem+CoreDataClass.h"
 #import <DateTools/DateTools.h>
+#import "NSString+UAAdditions.h"
 
 #define MoreTitleWithSourceNameAndDate NSLocalizedString(@"more at %@ / %@", @"More title having both source name and date.")
 #define MoreTitleWithSourceName NSLocalizedString(@"more at %@", @"More title having source name")
@@ -45,6 +46,9 @@
 }
 
 - (void)setTitle:(NSString *)title {
+  if ([title ua_isStringFittingInOneLineWithMaxSize:self.bounds.size font:self.titleLabel.font]) {
+    title = [title ua_stringByConvertingSecondLastSpaceToNewLine];
+  }
   self.titleLabel.text = title;
 }
 
