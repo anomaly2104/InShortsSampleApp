@@ -72,6 +72,11 @@ UANewsCardViewDelegate>
   [self.nfrc tdt_performFetch];
 }
 
+- (UANewsItem *)newsItemAtIndex:(NSUInteger)index {
+  NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+  return [self.nfrc objectAtIndexPath:indexPath];
+}
+
 #pragma mark - UAInshortsViewDelegate
 
 - (NSInteger)numberOfNewsItemsToDisplay {
@@ -108,6 +113,11 @@ UANewsCardViewDelegate>
 
 - (void)inshortsViewCurrentItemIndexDidChange:(UAInshortsView *)inshortsView {
   [self.navigationController setNavigationBarHidden:YES animated:YES];
+  if (inshortsView.currentItemIndex >= [self numberOfNewsItemsToDisplay] - 2) {
+    UANewsItem *lastNewsItem = [self newsItemAtIndex:[self numberOfNewsItemsToDisplay] - 1];
+    [self.newsFetchManager fetchNewsListWithNewsOffset:lastNewsItem.hashID
+                                             ascending:YES];
+  }
 }
 
 - (void)inshortsView:(UAInshortsView *)inshortsView
