@@ -24,7 +24,6 @@ UAInshortsViewDataSource,
 NSFetchedResultsControllerDelegate,
 UANewsCardViewDelegate>
 
-@property (nonatomic) UANewsFetchManager *newsFetchManager;
 @property (nonatomic) UAInshortsView *inshortsView;
 
 @property (nonatomic) NSFetchedResultsController *nfrc;
@@ -43,19 +42,13 @@ UANewsCardViewDelegate>
   
   [self setupNFRC];
   [self.inshortsView reloadData];
-  
-  self.newsFetchManager = [[UANewsFetchManager alloc] init];
-  [self fetchLatestNews];
+  [self.delegate newsListControllerDidLoad:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
   [self.navigationController setNavigationBarHidden:YES animated:NO];
-}
-
-- (void)fetchLatestNews {
-  [self.newsFetchManager fetchNewsListWithNewsOffset:nil
-                                           ascending:YES];
+  [self showNavigationBarIfNoContentAvailable];
 }
 
 - (void)setupNFRC {
@@ -75,6 +68,12 @@ UANewsCardViewDelegate>
 - (UANewsItem *)newsItemAtIndex:(NSUInteger)index {
   NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
   return [self.nfrc objectAtIndexPath:indexPath];
+}
+
+- (void)showNavigationBarIfNoContentAvailable {
+  if ([self numberOfNewsItemsToDisplay] == 0) {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+  }
 }
 
 #pragma mark - UAInshortsViewDelegate
@@ -115,8 +114,7 @@ UANewsCardViewDelegate>
   [self.navigationController setNavigationBarHidden:YES animated:YES];
   if (inshortsView.currentItemIndex >= [self numberOfNewsItemsToDisplay] - 2) {
     UANewsItem *lastNewsItem = [self newsItemAtIndex:[self numberOfNewsItemsToDisplay] - 1];
-    [self.newsFetchManager fetchNewsListWithNewsOffset:lastNewsItem.hashID
-                                             ascending:YES];
+    [self.delegate newsListControllerDidScrollToBottom:self lastNewsItem:lastNewsItem];
   }
 }
 
@@ -130,9 +128,7 @@ didSelectItemAtIndex:(NSInteger)index {
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
   [self.inshortsView reloadData];
-  if ([self numberOfNewsItemsToDisplay] == 0) {
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-  }
+  [self showNavigationBarIfNoContentAvailable];
 }
 
 #pragma mark - UANewsCardViewDelegate

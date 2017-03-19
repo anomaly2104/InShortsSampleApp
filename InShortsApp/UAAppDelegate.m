@@ -8,8 +8,12 @@
 
 #import "UAAppDelegate.h"
 #import "UAPersistenceStack.h"
+#import "UANewsListController.h"
+#import "UANewsListControllerDefaultDelegate.h"
 
 @interface UAAppDelegate ()
+
+@property (nonatomic, strong) UANewsListControllerDefaultDelegate *newsListControllerDelegate;
 
 @end
 
@@ -18,6 +22,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   [[UAPersistenceStack sharedInstance] setupDataStore];
+  
+  UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+  UANewsListController *newsListController = navigationController.viewControllers.firstObject;
+  self.newsListControllerDelegate = [[UANewsListControllerDefaultDelegate alloc] init];
+  newsListController.delegate = self.newsListControllerDelegate;
   return YES;
 }
 
