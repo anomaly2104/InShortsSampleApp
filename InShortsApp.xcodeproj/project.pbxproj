@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		635629DC1E7DBC15003E5732 /* UANewsItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 635629D91E7DBC15003E5732 /* UANewsItem+CoreDataClass.m */; };
-		635629DD1E7DBC15003E5732 /* UANewsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 635629DB1E7DBC15003E5732 /* UANewsItem+CoreDataProperties.m */; };
+		631FEE421E7E3FAC0017ECA6 /* UANewsItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE3F1E7E3FAC0017ECA6 /* UANewsItem+CoreDataClass.m */; };
+		631FEE431E7E3FAC0017ECA6 /* UANewsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE411E7E3FAC0017ECA6 /* UANewsItem+CoreDataProperties.m */; };
 		636B4E951E7D160700DF0DF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E941E7D160700DF0DF1 /* main.m */; };
 		636B4E981E7D160700DF0DF1 /* UAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E971E7D160700DF0DF1 /* UAAppDelegate.m */; };
 		636B4E9B1E7D160700DF0DF1 /* UANewsLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E9A1E7D160700DF0DF1 /* UANewsLisController.m */; };
@@ -42,10 +42,10 @@
 
 /* Begin PBXFileReference section */
 		4D3A95C0746E5BDFA3872E56 /* Pods-InShortsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InShortsApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-InShortsApp/Pods-InShortsApp.release.xcconfig"; sourceTree = "<group>"; };
-		635629D81E7DBC15003E5732 /* UANewsItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UANewsItem+CoreDataClass.h"; sourceTree = "<group>"; };
-		635629D91E7DBC15003E5732 /* UANewsItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataClass.m"; sourceTree = "<group>"; };
-		635629DA1E7DBC15003E5732 /* UANewsItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UANewsItem+CoreDataProperties.h"; sourceTree = "<group>"; };
-		635629DB1E7DBC15003E5732 /* UANewsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		631FEE3E1E7E3FAC0017ECA6 /* UANewsItem+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UANewsItem+CoreDataClass.h"; sourceTree = "<group>"; };
+		631FEE3F1E7E3FAC0017ECA6 /* UANewsItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataClass.m"; sourceTree = "<group>"; };
+		631FEE401E7E3FAC0017ECA6 /* UANewsItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UANewsItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		631FEE411E7E3FAC0017ECA6 /* UANewsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		636B4E901E7D160700DF0DF1 /* InShortsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InShortsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636B4E941E7D160700DF0DF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		636B4E961E7D160700DF0DF1 /* UAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAAppDelegate.h; sourceTree = "<group>"; };
@@ -178,10 +178,10 @@
 		636B4EC51E7D1B6E00DF0DF1 /* Core data */ = {
 			isa = PBXGroup;
 			children = (
-				635629D81E7DBC15003E5732 /* UANewsItem+CoreDataClass.h */,
-				635629D91E7DBC15003E5732 /* UANewsItem+CoreDataClass.m */,
-				635629DA1E7DBC15003E5732 /* UANewsItem+CoreDataProperties.h */,
-				635629DB1E7DBC15003E5732 /* UANewsItem+CoreDataProperties.m */,
+				631FEE3E1E7E3FAC0017ECA6 /* UANewsItem+CoreDataClass.h */,
+				631FEE3F1E7E3FAC0017ECA6 /* UANewsItem+CoreDataClass.m */,
+				631FEE401E7E3FAC0017ECA6 /* UANewsItem+CoreDataProperties.h */,
+				631FEE411E7E3FAC0017ECA6 /* UANewsItem+CoreDataProperties.m */,
 				636B4EBB1E7D175E00DF0DF1 /* UAPersistenceStack.h */,
 				636B4EBC1E7D175E00DF0DF1 /* UAPersistenceStack.m */,
 				636B4ED01E7D246600DF0DF1 /* UANewsItem+JSONDecoding.h */,
@@ -380,8 +380,8 @@
 				636B4ED21E7D246600DF0DF1 /* UANewsItem+JSONDecoding.m in Sources */,
 				636B4EDE1E7D2A2E00DF0DF1 /* NSNumber+UADateAdditions.m in Sources */,
 				636B4E9B1E7D160700DF0DF1 /* UANewsLisController.m in Sources */,
-				635629DD1E7DBC15003E5732 /* UANewsItem+CoreDataProperties.m in Sources */,
-				635629DC1E7DBC15003E5732 /* UANewsItem+CoreDataClass.m in Sources */,
+				631FEE431E7E3FAC0017ECA6 /* UANewsItem+CoreDataProperties.m in Sources */,
+				631FEE421E7E3FAC0017ECA6 /* UANewsItem+CoreDataClass.m in Sources */,
 				636B4EDB1E7D26F700DF0DF1 /* NSError+UAAdditions.m in Sources */,
 				636B4EBD1E7D175E00DF0DF1 /* UAPersistenceStack.m in Sources */,
 				636B4ECF1E7D1F5600DF0DF1 /* NSString+UAAdditions.m in Sources */,

@@ -120,6 +120,9 @@ didSelectItemAtIndex:(NSInteger)index {
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
   [self.inshortsView reloadData];
+  if ([self numberOfNewsItemsToDisplay] == 0) {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+  }
 }
 
 #pragma mark - UANewsCardViewDelegate
