@@ -7,7 +7,6 @@
 //
 
 #import "UANewsListController.h"
-#import "UANewsFetchManager.h"
 #import "UAInshortsView.h"
 #import "UANewsCardView.h"
 #import <CoreData/CoreData.h>
