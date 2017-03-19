@@ -62,7 +62,7 @@ static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
 
                                                             strongSelf.fetching = NO;
                                                             if (responseObject == nil) {
-                                                              TDTLogError(@"Error occurred while fetching news list: %@", error);
+                                                              TDTLogError(@"Error occurred while fetching news list: %@", error.localizedDescription);
                                                             } else {
                                                               [strongSelf handleNewsListFetchResponse:responseObject];
                                                             }
