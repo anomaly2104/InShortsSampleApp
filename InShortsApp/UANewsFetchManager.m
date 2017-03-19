@@ -52,15 +52,18 @@ static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
                                                                         URLString:APIURL
                                                                        parameters:parameters
                                                                             error:nil];
+  __weak typeof(self)weakSelf = self;
   NSURLSessionDataTask *dataTask = [self.sessionManager dataTaskWithRequest:request
                                                           completionHandler:^(NSURLResponse *response,
                                                                               NSDictionary *responseObject,
                                                                               NSError *error) {
-                                                            self.fetching = NO;
+                                                            typeof(weakSelf)strongSelf = weakSelf;
+
+                                                            strongSelf.fetching = NO;
                                                             if (responseObject == nil) {
                                                               TDTLogError(@"Error occurred while fetching news list: %@", error);
                                                             } else {
-                                                              [self handleNewsListFetchResponse:responseObject];
+                                                              [strongSelf handleNewsListFetchResponse:responseObject];
                                                             }
                                                           }];
   [dataTask resume];
