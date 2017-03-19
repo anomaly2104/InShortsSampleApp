@@ -29,5 +29,6 @@
 @optional
 - (void)inshortsViewCurrentItemIndexDidChange:(UAInshortsView *)inshortsView;
 - (void)inshortsView:(UAInshortsView *)inshortsView didSelectItemAtIndex:(NSInteger)index;
+- (void)inshortsViewDidPullToRefresh:(UAInshortsView *)inshortsView;
 
 @end

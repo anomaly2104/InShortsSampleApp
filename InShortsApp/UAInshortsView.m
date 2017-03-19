@@ -179,6 +179,9 @@
       if (!self.previousView || (translationInView.y < (self.currentView.frame.size.height / 2) && (velocityY < 200))) {
         // treat the swipe-down gesture as cancelled
         // Restore
+        if (self.previousView == nil && velocityY > 100) {
+          [self.delegate inshortsViewDidPullToRefresh:self];
+        }
         CGFloat animationDuration = 0.25f;
         
         [UIView animateWithDuration:animationDuration delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{

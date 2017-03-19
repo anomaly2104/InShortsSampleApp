@@ -109,6 +109,10 @@ UANewsCardViewDelegate>
 
 #pragma mark - UAInshortsViewDelegate
 
+- (void)inshortsViewDidPullToRefresh:(UAInshortsView *)inshortsView {
+  [self.delegate newsListControllerDidPullToRefresh:self];
+}
+
 - (void)inshortsViewCurrentItemIndexDidChange:(UAInshortsView *)inshortsView {
   [self.navigationController setNavigationBarHidden:YES animated:YES];
   if (inshortsView.currentItemIndex >= [self numberOfNewsItemsToDisplay] - 2) {
