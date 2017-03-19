@@ -10,6 +10,6 @@
 
 @interface NSString (UAAdditions)
 
-+ (NSString *)JSONStringForBoolValue:(BOOL)boolValue;
++ (NSString *)ua_JSONStringForBoolValue:(BOOL)boolValue;
 
 @end

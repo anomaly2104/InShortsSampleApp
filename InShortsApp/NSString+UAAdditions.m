@@ -10,7 +10,7 @@
 
 @implementation NSString (UAAdditions)
 
-+ (NSString *)JSONStringForBoolValue:(BOOL)boolValue {
++ (NSString *)ua_JSONStringForBoolValue:(BOOL)boolValue {
   return boolValue ? @"true" : @"false";
 }
 
