@@ -75,7 +75,7 @@ UANewsCardViewDelegate>
   }
 }
 
-#pragma mark - UAInshortsViewDelegate
+#pragma mark - UAInshortsViewDataSource
 
 - (NSInteger)numberOfNewsItemsToDisplay {
   id <NSFetchedResultsSectionInfo> sectionInfo = [self.nfrc sections].firstObject;
@@ -107,7 +107,7 @@ UANewsCardViewDelegate>
   return view;
 }
 
-#pragma mark - UAInshortsViewDataSource
+#pragma mark - UAInshortsViewDelegate
 
 - (void)inshortsViewCurrentItemIndexDidChange:(UAInshortsView *)inshortsView {
   [self.navigationController setNavigationBarHidden:YES animated:YES];
