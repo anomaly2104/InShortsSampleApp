@@ -44,6 +44,7 @@ static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
     return;
   }
   self.fetching = YES;
+  TDTLogVerbose(@"Fetching news list with offset: %@, Ascending: %@", newsOffset, @(isAscending));
   NSMutableDictionary *parameters = [@{@"ascending_order": [NSString JSONStringForBoolValue:isAscending]} mutableCopy];
   if (newsOffset != nil) {
     parameters[@"news_offset"] = newsOffset;
