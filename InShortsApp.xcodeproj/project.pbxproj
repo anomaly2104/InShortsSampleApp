@@ -162,6 +162,8 @@
 				636B4EDD1E7D2A2E00DF0DF1 /* NSNumber+UADateAdditions.m */,
 				631FEE441E7E46010017ECA6 /* UANewsListControllerDefaultDelegate.h */,
 				631FEE451E7E46010017ECA6 /* UANewsListControllerDefaultDelegate.m */,
+				636B4ECD1E7D1F5600DF0DF1 /* NSString+UAAdditions.h */,
+				636B4ECE1E7D1F5600DF0DF1 /* NSString+UAAdditions.m */,
 			);
 			path = InShortsApp;
 			sourceTree = "<group>";
@@ -208,8 +210,6 @@
 				636B4EDA1E7D26F700DF0DF1 /* NSError+UAAdditions.m */,
 				636B4EC61E7D1BE000DF0DF1 /* UANewsFetchManager.h */,
 				636B4EC71E7D1BE000DF0DF1 /* UANewsFetchManager.m */,
-				636B4ECD1E7D1F5600DF0DF1 /* NSString+UAAdditions.h */,
-				636B4ECE1E7D1F5600DF0DF1 /* NSString+UAAdditions.m */,
 			);
 			name = Network;
 			sourceTree = "<group>";
