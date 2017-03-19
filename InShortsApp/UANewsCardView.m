@@ -47,7 +47,7 @@
 
 - (void)setTitle:(NSString *)title {
   if ([title ua_isStringFittingInOneLineWithMaxSize:self.bounds.size font:self.titleLabel.font]) {
-    title = [title ua_stringByConvertingSecondLastSpaceToNewLine];
+    title = [title ua_stringByPuttingNewLineAtIndexOfSpaceFromLastAtPosition:2];
   }
   self.titleLabel.text = title;
 }

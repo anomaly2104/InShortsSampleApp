@@ -11,6 +11,7 @@
 		631FEE4B1E7E4C080017ECA6 /* UANewsItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE481E7E4C080017ECA6 /* UANewsItem+CoreDataClass.m */; };
 		631FEE4C1E7E4C080017ECA6 /* UANewsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE4A1E7E4C080017ECA6 /* UANewsItem+CoreDataProperties.m */; };
 		631FEE521E7E5DE70017ECA6 /* UAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE511E7E5DE70017ECA6 /* UAHomeViewController.m */; };
+		631FEE541E7E6A200017ECA6 /* NSString_UAAdditions_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE531E7E6A200017ECA6 /* NSString_UAAdditions_Tests.m */; };
 		636B4E951E7D160700DF0DF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E941E7D160700DF0DF1 /* main.m */; };
 		636B4E981E7D160700DF0DF1 /* UAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E971E7D160700DF0DF1 /* UAAppDelegate.m */; };
 		636B4E9B1E7D160700DF0DF1 /* UANewsLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E9A1E7D160700DF0DF1 /* UANewsLisController.m */; };
@@ -52,6 +53,7 @@
 		631FEE4A1E7E4C080017ECA6 /* UANewsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		631FEE501E7E5DE70017ECA6 /* UAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAHomeViewController.h; sourceTree = "<group>"; };
 		631FEE511E7E5DE70017ECA6 /* UAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAHomeViewController.m; sourceTree = "<group>"; };
+		631FEE531E7E6A200017ECA6 /* NSString_UAAdditions_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSString_UAAdditions_Tests.m; sourceTree = "<group>"; };
 		636B4E901E7D160700DF0DF1 /* InShortsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InShortsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636B4E941E7D160700DF0DF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		636B4E961E7D160700DF0DF1 /* UAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAAppDelegate.h; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 			children = (
 				636B4EB01E7D160700DF0DF1 /* InShortsAppTests.m */,
 				636B4EB21E7D160700DF0DF1 /* Info.plist */,
+				631FEE531E7E6A200017ECA6 /* NSString_UAAdditions_Tests.m */,
 			);
 			path = InShortsAppTests;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				636B4EB11E7D160700DF0DF1 /* InShortsAppTests.m in Sources */,
+				631FEE541E7E6A200017ECA6 /* NSString_UAAdditions_Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

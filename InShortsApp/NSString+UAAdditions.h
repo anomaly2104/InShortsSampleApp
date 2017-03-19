@@ -16,6 +16,5 @@
 - (BOOL)ua_isStringFittingInOneLineWithMaxSize:(CGSize)maxSize
                                           font:(UIFont *)font;
 
-- (NSString *)ua_stringByConvertingSecondLastSpaceToNewLine;
-
+- (NSString *)ua_stringByPuttingNewLineAtIndexOfSpaceFromLastAtPosition:(NSUInteger)spacePositionFromLast;
 @end

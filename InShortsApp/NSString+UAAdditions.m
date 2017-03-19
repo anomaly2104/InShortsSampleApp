@@ -37,9 +37,7 @@
                        range:rangeToSearch];
 }
 
-- (NSString *)ua_stringByConvertingSecondLastSpaceToNewLine {
-  NSUInteger spacePositionFromLast = 2;
-  
+- (NSString *)ua_stringByPuttingNewLineAtIndexOfSpaceFromLastAtPosition:(NSUInteger)spacePositionFromLast {
   NSRange spaceRange = NSMakeRange(NSNotFound, 0);
   NSString *str = self;
   for (NSUInteger i = 1; i <= spacePositionFromLast; i++) {
