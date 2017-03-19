@@ -20,6 +20,7 @@ static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
 
 @property (nonatomic) AFURLSessionManager *sessionManager;
 @property (nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, getter=isFetching) BOOL fetching;
 
 @end
 
@@ -39,6 +40,10 @@ static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
 
 - (void)fetchNewsListWithNewsOffset:(NSString *)newsOffset
                           ascending:(BOOL)isAscending {
+  if (self.isFetching) {
+    return;
+  }
+  self.fetching = YES;
   NSMutableDictionary *parameters = [@{@"ascending_order": [NSString JSONStringForBoolValue:isAscending]} mutableCopy];
   if (newsOffset != nil) {
     parameters[@"news_offset"] = newsOffset;
@@ -51,6 +56,7 @@ static NSString * const APIURL = @"https://read-api.newsinshorts.com/v1/news/";
                                                           completionHandler:^(NSURLResponse *response,
                                                                               NSDictionary *responseObject,
                                                                               NSError *error) {
+                                                            self.fetching = NO;
                                                             if (responseObject == nil) {
                                                               TDTLogError(@"Error occurred while fetching news list: %@", error);
                                                             } else {
