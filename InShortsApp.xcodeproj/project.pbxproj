@@ -10,6 +10,7 @@
 		631FEE461E7E46010017ECA6 /* UANewsListControllerDefaultDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE451E7E46010017ECA6 /* UANewsListControllerDefaultDelegate.m */; };
 		631FEE4B1E7E4C080017ECA6 /* UANewsItem+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE481E7E4C080017ECA6 /* UANewsItem+CoreDataClass.m */; };
 		631FEE4C1E7E4C080017ECA6 /* UANewsItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE4A1E7E4C080017ECA6 /* UANewsItem+CoreDataProperties.m */; };
+		631FEE521E7E5DE70017ECA6 /* UAHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631FEE511E7E5DE70017ECA6 /* UAHomeViewController.m */; };
 		636B4E951E7D160700DF0DF1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E941E7D160700DF0DF1 /* main.m */; };
 		636B4E981E7D160700DF0DF1 /* UAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E971E7D160700DF0DF1 /* UAAppDelegate.m */; };
 		636B4E9B1E7D160700DF0DF1 /* UANewsLisController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636B4E9A1E7D160700DF0DF1 /* UANewsLisController.m */; };
@@ -49,6 +50,8 @@
 		631FEE481E7E4C080017ECA6 /* UANewsItem+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataClass.m"; sourceTree = "<group>"; };
 		631FEE491E7E4C080017ECA6 /* UANewsItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UANewsItem+CoreDataProperties.h"; sourceTree = "<group>"; };
 		631FEE4A1E7E4C080017ECA6 /* UANewsItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UANewsItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		631FEE501E7E5DE70017ECA6 /* UAHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAHomeViewController.h; sourceTree = "<group>"; };
+		631FEE511E7E5DE70017ECA6 /* UAHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAHomeViewController.m; sourceTree = "<group>"; };
 		636B4E901E7D160700DF0DF1 /* InShortsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InShortsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		636B4E941E7D160700DF0DF1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		636B4E961E7D160700DF0DF1 /* UAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UAAppDelegate.h; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 				636B4EE41E7D2F5500DF0DF1 /* UANewsCardView.xib */,
 				636B4E991E7D160700DF0DF1 /* UANewsListController.h */,
 				636B4E9A1E7D160700DF0DF1 /* UANewsLisController.m */,
+				631FEE501E7E5DE70017ECA6 /* UAHomeViewController.h */,
+				631FEE511E7E5DE70017ECA6 /* UAHomeViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -397,6 +402,7 @@
 				636B4EC81E7D1BE000DF0DF1 /* UANewsFetchManager.m in Sources */,
 				636B4EE51E7D2F5500DF0DF1 /* UAInshortsView.m in Sources */,
 				631FEE4B1E7E4C080017ECA6 /* UANewsItem+CoreDataClass.m in Sources */,
+				631FEE521E7E5DE70017ECA6 /* UAHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

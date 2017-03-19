@@ -147,17 +147,4 @@ didSelectItemAtIndex:(NSInteger)index {
   [newsItem toggleBookmarkInManagedObjectContext:[UAPersistenceStack sharedInstance].backgroundMOC];
 }
 
-#pragma mark - Segue
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([segue.identifier isEqualToString:@"UAShowBookmarks"]) {
-    UANewsListController *booksmarks = segue.destinationViewController;
-    booksmarks.predicate = [self predicateForBooksmarks];
-  }
-}
-
-- (NSPredicate *)predicateForBooksmarks {
-  return [NSPredicate predicateWithFormat:@"isBookmarked = 1"];
-}
-
 @end
